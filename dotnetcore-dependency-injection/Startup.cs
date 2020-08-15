@@ -30,7 +30,7 @@ namespace dotnetcore_dependency_injection
             services.AddTransient<CustomerServiceA>();
             services.AddTransient<CustomerServiceB>();
 
-            services.AddSingleton<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
